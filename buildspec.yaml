@@ -17,6 +17,7 @@ phases:
       - echo $IMAGE_NAME
       - mvn compile
       - mvn package
+      - docker login -u="susmithachristie" -p="Hello@1512"
       - echo Building the Docker image...
       - docker build -t $IMAGE_NAME .
   post_build:
